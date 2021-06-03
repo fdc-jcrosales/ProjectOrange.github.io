@@ -1,74 +1,105 @@
-.container {
-    max-width: 960px;
-  }
-  
-  /*
-   * Custom translucent site header
-   */
-  
-  .site-header {
-    background-color: rgba(0, 0, 0, .85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-  }
-  .site-header a {
-    color: #999;
-    transition: ease-in-out color .15s;
-  }
-  .site-header a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /*
-   * Dummy devices (replace them with your own or something else entirely!)
-   */
-  
-  .product-device {
-    position: absolute;
-    right: 10%;
-    bottom: -30%;
-    width: 300px;
-    height: 540px;
-    background-color: #333;
-    border-radius: 21px;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
-  }
-  
-  .product-device::before {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    bottom: 10%;
-    left: 10px;
-    content: "";
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: 5px;
-  }
-  
-  .product-device-2 {
-    top: -25%;
-    right: auto;
-    bottom: 0;
-    left: 5%;
-    background-color: #e5e5e5;
-  }
-  
-  
-  /*
-   * Extra utilities
-   */
-  
-  .flex-equal > * {
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding-top: 5.38rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+/* Custom translucent site header */
+.navbar.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.navbar-nav .nav-link{
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.main_view {
+  /* height: calc(100vh - 85px); */
+  position: relative;
+}
+.main_view .btn{
+  width: 100%;
+  max-width: 440px;
+  height: 65px;
+  display: inline-block;
+  background-color: #000;
+  border-color: #495057;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+.main_view::after{
+  content: '';
+  position: absolute;
+  background-image: url(/images/about_wave2.svg);
+}
+/* Carousel base class */
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+.about_us{
+  position: relative;
+  color: #fff;
+  background-color: #e65d4e;
+}
+.about_us h2{
+  margin-right: 10%;
+}
+.about_us::before{
+  content: '';
+  position: absolute;
+  background-image: url(/images/about_wave.svg);
+}
+.about_us::after{
+  content: '';
+  position: absolute;
+  background-image: url(/images/about_wave2.svg);
+}
+/* .about_us #wave_1 {
+  position: absolute;
+  bottom: -1px;
+} */
+.about_us p{
+  margin-bottom: 2.5rem;
+}
+.about_us svg{
+  background-color: #fff;
+}
+
+/*
+  * Extra utilities
+  */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
     -ms-flex: 1;
     flex: 1;
   }
-  @media (min-width: 768px) {
-    .flex-md-equal > * {
-      -ms-flex: 1;
-      flex: 1;
-    }
-  }
-  
-  .overflow-hidden { overflow: hidden; }
+}
