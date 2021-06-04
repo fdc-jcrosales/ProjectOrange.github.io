@@ -2,15 +2,37 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  padding-top: 5.38rem;
-  padding-bottom: 3rem;
+  font-family: 'Jost', sans-serif;
   color: #5a5a5a;
 }
-/* Custom translucent site header */
+
+/* Common Css */
+.bg-dark{
+  color: #fff;
+}
+.btn{
+  font-weight: 600;
+  background-color: #e65d4e !important;
+  border-color: #ff6666 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%);
+}
+.btn:hover, #contact_us .btn:focus, #contact_us .btn.focus, #contact_us .btn.active {
+  color: #ffffff !important;
+  background-color: #ff0f0f !important;
+  border-color: #ff0f0f !important;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+/* End */
+
+.navbar, #logo {
+  transition: all .3s;
+}
 .navbar.site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: #313131;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+  opacity: 0.95;
 }
 .navbar-nav .nav-link{
   color: #999;
@@ -20,86 +42,207 @@ body {
   color: #fff;
   text-decoration: none;
 }
-.main_view {
-  /* height: calc(100vh - 85px); */
+.navbar  button.navbar-toggler {
+  outline: none;
+  width: 31px;
+  height: 20px;
+  cursor: pointer;
+  transition: all .2s;
   position: relative;
+  align-self: center;
 }
-.main_view .btn{
-  width: 100%;
-  max-width: 440px;
-  height: 65px;
-  display: inline-block;
-  background-color: #000;
-  border-color: #495057;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 50px;
-  text-align: center;
-}
-.main_view::after{
-  content: '';
+.navbar button.navbar-toggler .hamburger span {
   position: absolute;
-  background-image: url(/images/about_wave2.svg);
+  right: 0;
+  width: 30px;
+  height: 2px;
+  border-right: 5px;
+  color: orange;
+  background-color: currentColor;
 }
-/* Carousel base class */
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-  background-color: #777;
-}
-.carousel-item > img {
-  position: absolute;
+.navbar button.navbar-toggler .hamburger span:nth-child(1) {
   top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
+  transition: all .2s;
 }
-.about_us{
+.navbar button.navbar-toggler .hamburger span:nth-child(2) {
+  top: 8px;
+  transition: all .15s;
+}
+.navbar button.navbar-toggler .hamburger span:nth-child(3) {
+  top: 8px;
+  transition: all .15s;
+}
+.navbar button.navbar-toggler .hamburger span:nth-child(4) {
+  top: 16px;
+  transition: all .2s;
+}
+.navbar button.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(1) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all .2s;
+}
+.navbar button.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+  transition: all .25s;
+}
+.navbar button.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: all .25s;
+}
+.navbar button.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(4) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all .2s;
+}
+#main_view {
+  height: 100vh;
   position: relative;
-  color: #fff;
-  background-color: #e65d4e;
+  overflow: hidden;
 }
-.about_us h2{
-  margin-right: 10%;
+#main_view .carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: top;
 }
-.about_us::before{
-  content: '';
+#main_view .carousel-caption{
+  bottom: 10%;
+}
+#main_view h1 strong{
+  color: orange;
+  text-shadow: 1px 0px black;
+  font-size: 3rem;
+}
+#about_us{
+  background-color: #faefef;
+}
+#about_us .item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#about_us .item .icon-box{
+  background: #e65d4e;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#about_us .item .icon-box::before {
+  content: "\f063";
+  font-family: "Font Awesome 5 Free";
   position: absolute;
-  background-image: url(/images/about_wave.svg);
+  font-size: 32px;
+  left: 50%;
+  top: 120%;
+  color: #e65d4e;
+  transform: translate(-50%, 0);
 }
-.about_us::after{
-  content: '';
-  position: absolute;
-  background-image: url(/images/about_wave2.svg);
+#about_us .item .icon-box > span{
+  font-size: 2rem;
 }
-/* .about_us #wave_1 {
-  position: absolute;
-  bottom: -1px;
-} */
-.about_us p{
-  margin-bottom: 2.5rem;
+#misson_vission{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #f3f3f3;
 }
-.about_us svg{
+#misson_vission h2{
+  color: orange;
+  text-transform: uppercase;
+}
+#mission{
+  border-right: 1px solid #6e491a;
+}
+#values {
+  background-color: #f6f6f6;
+}
+#values .wrapper{
+  min-height: 584px;
+  padding: 2rem;
   background-color: #fff;
+  margin-bottom: 2rem;
+}
+#values .row .col-12:nth-child(n+4) > .wrapper{
+  min-height: 462px;
+}
+#values img{
+  max-width: 150px;
+}
+.user_image{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+}
+#career i {
+  width: 195px;
+  height: 195px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 195px;
+  text-align: center;
+  transition: all .3s;
+  color: orange;
+  background-color: #ffffff;
+  border: 2px solid orange;
+}
+#team .carousel-item{
+  min-height: 408px;
+}
+#team .carousel-control-next,
+#team .carousel-control-prev {
+  filter: invert(100%);
+}
+footer .google-map{
+  height: 25rem;
+  position: relative;
+}
+footer .link-list a{
+  color: #e65d4e;
+}
+footer .soc-item{
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 0.5rem;
+}
+footer .soc-item i{
+  color: #fff;
+  opacity: 0.8;
 }
 
-/*
-  * Extra utilities
-  */
-
-.flex-equal > * {
-  -ms-flex: 1;
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    -ms-flex: 1;
-    flex: 1;
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  #main_view h1 strong{
+    font-size: inherit;
+  }
+  #main_view .carousel-caption{
+    right: 2%;
+    left: 2%;
   }
 }
+
+/*  Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {  }
+
+ /* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {  
+  #mission{
+    border-right: 0px;
+    border-bottom: 1px solid #6d4343;
+  }
+}
+
+ /* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  }
