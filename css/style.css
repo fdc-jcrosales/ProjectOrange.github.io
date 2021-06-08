@@ -182,7 +182,7 @@ section, header, footer, .container, .container-fluid {
   color: #fafafa;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(/images/about_us.jpg);
+  background-image: url(../images/about_us.jpg);
 }
 #about_us .item{
   display: flex;
@@ -251,7 +251,7 @@ section, header, footer, .container, .container-fluid {
   color: #fafafa;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(/images/team.jpg);
+  background-image: url(../images/team.jpg);
 }
 #team .user_image{
   width: 200px;
@@ -331,7 +331,7 @@ section, header, footer, .container, .container-fluid {
   color: #fafafa;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(/images/work.jpg);
+  background-image: url(../images/work.jpg);
 }
 #career i {
   width: 195px;
