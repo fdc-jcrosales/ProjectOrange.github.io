@@ -9,12 +9,12 @@ body {
 /* Common Css */
 .bg-dark{
   background-color: #232323 !important;
-  color: #f3f3f3;
+  color: #fafafa;
 }
 .btn{
   background-color: #e65d4e !important;
   border-color: #ff6666 !important;
-  color: #ffffff !important;
+  color: #fafafa !important;
   font-style: normal;
   font-size: 1.1rem;
   font-weight: 600;
@@ -31,7 +31,7 @@ body {
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%);
 }
 .btn:hover, #contact_us .btn:focus, #contact_us .btn.focus, #contact_us .btn.active {
-  color: #ffffff !important;
+  color: #fafafa !important;
   background-color: #ff0f0f !important;
   border-color: #ff0f0f !important;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
@@ -41,6 +41,39 @@ body {
 }
 .text-dark-orange{
   color: #e65d4e;
+}
+section, header, footer {
+  background-color: #ffffff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section, header, footer, .container, .container-fluid {
+  position: relative;
+  word-wrap: break-word;
+}
+.section-header{
+  text-align: center;
+  text-transform: uppercase;
+   margin-bottom: 1rem;
+}
+.section-line {
+  width: 5em;
+  border-bottom: 1px solid #e65d4e;
+  display: block;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+.section-overlay{
+  background-color: rgb(51, 51, 51);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
 }
 /* End */
 
@@ -60,7 +93,7 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 1.1rem;
   line-height: 1.5;
-  color: #fff;
+  color: #fafafa;
   transition: ease-in-out color .15s;
   padding: 0 0.3em !important;
   margin: .667em 1em !important;
@@ -146,7 +179,10 @@ body {
   font-size: 3rem;
 }
 #about_us{
-  background-color: #faefef;
+  color: #fafafa;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(/images/about_us.jpg);
 }
 #about_us .item{
   display: flex;
@@ -184,7 +220,7 @@ body {
 #misson_vission{
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #f3f3f3;
+  color: #fafafa;
 }
 #misson_vission h2{
   color: orange;
@@ -193,13 +229,16 @@ body {
 #mission{
   border-right: 1px solid #6e491a;
 }
-#values {
-  background-color: #f6f6f6;
+#values, #benefits, #contact_us, #gallery{
+  background: linear-gradient(45deg, #f6f4f2, #f6f4f2);
 }
 #values .wrapper{
   min-height: 584px;
+  border-radius: 0;
+  /* border: 1px solid #dddfe0;
+  box-shadow: 0 0 17px 0 rgb(0 0 0 / 21%); */
   padding: 2rem;
-  background-color: #fff;
+  background-color: #fafafa;
   margin-bottom: 2rem;
 }
 #values .row .col-12:nth-child(n+4) > .wrapper{
@@ -208,13 +247,91 @@ body {
 #values img{
   max-width: 150px;
 }
-.user_image{
+#team {
+  color: #fafafa;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(/images/team.jpg);
+}
+#team .user_image{
   width: 200px;
   height: 200px;
+  background-color: #fff;
   margin-bottom: 1.6rem;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto 2rem auto;
+}
+#team .carousel-item{
+  min-height: 408px;
+}
+#team .carousel-control-next,
+#team .carousel-control-prev {
+  filter: invert(100%);
+}
+#benefits {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+}
+#benefits img, #gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+#benefits .card, #gallery .card {
+  background-color: transparent;
+  border: none;
+}
+#benefits .card-title {
+  color: orange;
+}
+#benefits .card:hover, #gallery .card:hover {
+  cursor: pointer;
+}
+#benefits .card:hover .img-wrapper:before,  #gallery .card:hover .img-wrapper:before{
+  opacity: 0.8;
+}
+#benefits .card:hover .content-wrap, #gallery .card:hover .content-wrap {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+#benefits .img-wrapper, #gallery .img-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+#benefits .img-wrapper:before, #gallery .img-wrapper:before{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background: #f6f3ee;
+  opacity: 0;
+  transition: all 0.3s;
+  content: '';
+  z-index: 1;
+}
+#benefits .content-wrap, #gallery .content-wrap {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s;
+  left: auto;
+  padding: 2rem;
+  top: 50%;
+  z-index: 2;
+  width: 100%;
+  transform: translateY(-45%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#work {
+  color: #fafafa;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(/images/work.jpg);
 }
 #career i {
   width: 195px;
@@ -225,15 +342,8 @@ body {
   text-align: center;
   transition: all .3s;
   color: orange;
-  background-color: #ffffff;
+  background-color: #fafafa;
   border: 2px solid orange;
-}
-#team .carousel-item{
-  min-height: 408px;
-}
-#team .carousel-control-next,
-#team .carousel-control-prev {
-  filter: invert(100%);
 }
 #go_top{
   display: none;
@@ -245,12 +355,12 @@ body {
   border: none;
   outline: none;
   color: #e65d4e;
+  background: none;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
   transition: all 0.3s;
 }
-
 #go_top:hover {
   color: #ff0f0f;
 }
@@ -263,13 +373,32 @@ footer .link-list a{
 }
 footer .soc-item{
   font-size: 1.3rem;
-  color: #fff;
+  color: #fafafa;
   margin: 0 0.5rem;
 }
 footer .soc-item i{
   color: #e65d4e;
   opacity: 0.8;
 }
+/* Playbox CSS */
+.playbox, .playboximage{
+  background-color: rgb(0 0 0 / 90%) !important;
+  overflow: unset !important;
+  z-index: 1050 !important;
+}
+.playboximage .bgImage{
+  width: 100% !important;
+  height: 100% !important;
+}
+.playboximage .imageList img{
+  width: unset !important;
+  height: unset !important;
+}
+.playboximage .exit {
+  background-color: #303030 !important;
+  box-shadow: 0 0 6px rgb(0 0 0 / 60%) !important;
+}
+/* End Css */
 
  /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
@@ -283,7 +412,15 @@ footer .soc-item i{
 }
 
 /*  Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {  }
+@media (max-width: 767.98px) { 
+  #benefits .card .img-wrapper:before {
+    opacity: 0.8;
+  }
+  #benefits .card .content-wrap {
+    opacity: 1;
+    padding: 1rem;
+  }
+}
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {  
@@ -298,6 +435,11 @@ footer .soc-item i{
     max-width: 100%;
   }
 }
-
  /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {  }
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #benefits .container {
+    max-width: 1400px;
+  }
+}
