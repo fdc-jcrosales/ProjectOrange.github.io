@@ -178,12 +178,6 @@ section, header, footer, .container, .container-fluid {
   text-shadow: 1px 0px black;
   font-size: 3rem;
 }
-#about_us{
-  color: #fafafa;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-image: url(../images/about_us.jpg);
-}
 #about_us .item{
   display: flex;
   align-items: center;
