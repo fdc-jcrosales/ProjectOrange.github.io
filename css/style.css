@@ -253,7 +253,10 @@ section, header, footer, .container, .container-fluid {
   color: #fafafa;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(../images/team.jpg);
+  background-image: url(../images/admins/bg.jpg);
+}
+#team .section-overlay{
+  opacity: 0;
 }
 #team .user_image{
   width: 200px;
