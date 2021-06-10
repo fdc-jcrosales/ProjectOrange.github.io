@@ -3,7 +3,7 @@ html {
 }
 body {
   font-family: 'Jost', sans-serif;
-  color: #5a5a5a;
+  color: #232323;
 }
 
 /* Common Css */
@@ -80,12 +80,6 @@ section, header, footer, .container, .container-fluid {
 .navbar, #logo {
   transition: all .3s;
 }
-.navbar.site-header {
-  background-color: #232323;
-  /* -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  opacity: 0.95; */
-}
 .navbar-nav .nav-link{
   display: flex;
   align-items: center;
@@ -159,9 +153,31 @@ section, header, footer, .container, .container-fluid {
   transition: all .2s;
 }
 #main_view {
-  height: 100vh;
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
+}
+#main_view .section-heading {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1010;
+}
+#main_view .section-heading h1{
+  font-size: 4.6rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+  #main_view .section-heading h1 strong{
+  color: orange;
+  text-shadow: 1px 1px #232323;
+  font-size: 3rem;
 }
 #main_view .carousel-item img {
   width: 100%;
@@ -169,14 +185,6 @@ section, header, footer, .container, .container-fluid {
   object-fit: cover;
   -o-object-fit: cover;
   object-position: top;
-}
-#main_view .carousel-caption{
-  bottom: 10%;
-}
-#main_view h1 strong{
-  color: orange;
-  text-shadow: 1px 0px black;
-  font-size: 3rem;
 }
 #about_us .item{
   display: flex;
