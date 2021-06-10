@@ -13,8 +13,10 @@
             $goTop.style.display = "none";
         }
     }
-
     window.onscroll = function() {scrollFunction()};
+
+    //Initialized WOW js
+    new WOW().init();
 
     $("#go_top").click(function(){
         document.body.scrollTop = 0;
