@@ -251,9 +251,35 @@ section, header, footer, .container, .container-fluid {
 }
 #team {
   color: #fafafa;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 3rem;
   background-image: url(../images/admins/bg.jpg);
+}
+#team .team_content{
+  display: flex;
+}
+#team .team_content .team_img{
+  margin-bottom: -20px;
+  width: 50%;
+}
+#team .team_content .team_text{
+  text-align: left;
+  margin-left: 2rem;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+#team .team_content .team_text h3{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#team .team_content .team_text h3 small{
+  display: block;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+#team .team_content .team_text p{
+  color: #000;
 }
 #team .section-overlay{
   opacity: 0;
@@ -414,6 +440,7 @@ footer .soc-item i{
     right: 2%;
     left: 2%;
   }
+  
 }
 
 /*  Small devices (landscape phones, less than 768px) */
@@ -432,6 +459,29 @@ footer .soc-item i{
   #mission{
     border-right: 0px;
     border-bottom: 1px solid #6d4343;
+  }
+  #team .team_content{
+    display: block;
+    text-align: center;
+  }
+  #team .team_content .team_img{
+    margin-bottom: 0;
+    width: 100%;
+  }
+  #team .team_content .team_img img{
+    border-bottom: 10px solid #fff;
+  }
+
+  #team .team_content .team_img .w-100{
+    width: 50% !important;
+  }
+  #team .team_content .team_text{
+    text-align: center;
+    margin-left: 0;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    width: 100%;
+    min-height: 220px;
   }
 }
  /* Medium devices (tablets, 768px and up) */
