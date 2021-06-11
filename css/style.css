@@ -36,6 +36,9 @@ body {
   border-color: #ff0f0f !important;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
 }
+.text-dark{
+  color: #232323;
+}
 .text-orange{
   color: orange;
 }
@@ -74,6 +77,18 @@ section, header, footer, .container, .container-fluid {
   z-index: 0;
   opacity: 0.4;
   pointer-events: none;
+}
+.modal-header{
+  border-bottom: 1px solid orange;
+}
+.modal-header .close{
+  color: #e65d4e;
+  text-shadow: none;
+  opacity: 1;
+  outline: none;
+}
+.modal-header .close:not(:disabled):not(.disabled):focus, .modal-header .close:not(:disabled):not(.disabled):hover{
+  color: #ff0f0f;
 }
 /* End */
 
@@ -282,7 +297,7 @@ section, header, footer, .container, .container-fluid {
   color: #000;
 }
 #team .section-overlay{
-  opacity: 0;
+  opacity: 0.1;
 }
 #team .user_image{
   width: 200px;
@@ -317,7 +332,7 @@ section, header, footer, .container, .container-fluid {
 #benefits .card-title {
   color: orange;
 }
-#benefits .card:hover, #gallery .card:hover {
+#benefits .card:hover, #gallery .card:hover,#career .wrapper:hover {
   cursor: pointer;
 }
 #benefits .card:hover .img-wrapper:before,  #gallery .card:hover .img-wrapper:before{
@@ -375,6 +390,23 @@ section, header, footer, .container, .container-fluid {
   color: orange;
   background-color: #fafafa;
   border: 2px solid orange;
+}
+#career .image-wrap{
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  pointer-events: none;
+  z-index: 1;
+}
+#career .wrapper .image-wrap i{
+  background: #f6f3ee;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#career .wrapper:hover .image-wrap i{
+  opacity: 0.8;
 }
 #go_top{
   display: none;
