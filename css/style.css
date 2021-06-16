@@ -196,7 +196,7 @@ section, header, footer, .container, .container-fluid {
   font-size: 3rem;
 }
 #main_view .carousel-item img {
-  width: 100%;
+  width: 80%;
   height: 100vh;
   object-fit: cover;
   -o-object-fit: cover;
