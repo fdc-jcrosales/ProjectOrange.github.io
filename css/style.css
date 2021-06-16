@@ -58,7 +58,7 @@ section, header, footer, .container, .container-fluid {
 .section-header{
   text-align: center;
   text-transform: uppercase;
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .section-line {
   width: 5em;
@@ -189,7 +189,8 @@ section, header, footer, .container, .container-fluid {
   font-weight: bold;
   line-height: 1.1;
 }
-  #main_view .section-heading h1 strong{
+
+#main_view .section-heading h1 strong{
   color: orange;
   text-shadow: 1px 1px #232323;
   font-size: 3rem;
@@ -200,6 +201,9 @@ section, header, footer, .container, .container-fluid {
   object-fit: cover;
   -o-object-fit: cover;
   object-position: top;
+}
+#about_us{
+   padding-top: 50px;
 }
 #about_us .item{
   display: flex;
@@ -268,6 +272,9 @@ section, header, footer, .container, .container-fluid {
   color: #fafafa;
   padding-top: 3rem;
   background-image: url(../images/admins/bg.jpg);
+}
+#team strong{
+  color: #ffa500;
 }
 #team .team_content{
   display: flex;
@@ -497,6 +504,8 @@ footer .soc-item i{
     display: block;
     text-align: center;
   }
+
+
   #team .team_content .team_img{
     margin-bottom: 0;
     width: 100%;
