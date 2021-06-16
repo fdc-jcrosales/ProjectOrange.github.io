@@ -286,6 +286,7 @@ section, header, footer, .container, .container-fluid {
 #team .team_content .team_text h3{
   text-transform: uppercase;
   font-weight: bold;
+  color: #ffa500;
 }
 #team .team_content .team_text h3 small{
   display: block;
@@ -316,7 +317,7 @@ section, header, footer, .container, .container-fluid {
   filter: invert(100%);
 }
 #benefits {
-  padding-top: 60px;
+  padding-top: 60px;s
   padding-bottom: 60px;
   background-color: #ffffff;
 }
