@@ -517,29 +517,25 @@ footer .soc-item i{
 }
 /* End Css */
 
- /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-  #main_view h1 strong{
-    font-size: inherit;
-  }
-  #main_view .carousel-caption{
-    right: 2%;
-    left: 2%;
-  }
-  
-}
-
-/*  Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
-  #benefits .card .img-wrapper:before {
-    opacity: 0.8;
-  }
-  #benefits .card .content-wrap {
-    opacity: 1;
-    padding: 1rem;
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .navbar .container {
+    max-width: 100%;
   }
 }
 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #benefits .container {
+    max-width: 1400px;
+  }
+}
+ /* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  
+  #main_view .carousel-item img{
+    object-position: 85%;
+  }
+}
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {  
   #mission{
@@ -550,8 +546,6 @@ footer .soc-item i{
     display: block;
     text-align: center;
   }
-
-
   #team .team_content .team_img{
     margin-bottom: 0;
     width: 100%;
@@ -571,27 +565,19 @@ footer .soc-item i{
     width: 100%;
     min-height: 220px;
   }
-}
- /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-  .navbar .container {
-    max-width: 100%;
-  }
-}
- /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {  
-  
-}
- /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  #benefits .container {
-    max-width: 1400px;
-  }
-}
-@media (max-width: 991.98px) { 
   #benefits .content_box{
     flex-direction: column;
     padding: 20px;
+  }
+}
+/*  Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  #benefits .card .img-wrapper:before {
+    opacity: 0.8;
+  }
+  #benefits .card .content-wrap {
+    opacity: 1;
+    padding: 1rem;
   }
 }
 @media (max-width: 600px) { 
@@ -599,5 +585,25 @@ footer .soc-item i{
     margin: 5px 0;
   }
 }
-
-
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  #main_view h1 strong{
+    font-size: inherit;
+  }
+  #main_view .carousel-caption{
+    right: 2%;
+    left: 2%;
+  }
+  #main_view .section-heading h1{
+    font-size: 3rem;
+    padding-right: 5rem;
+    padding-top: 2.5rem;
+    line-height: 1;
+  }
+  #main_view .section-heading h1 strong{
+    font-size: 1.8rem;
+  }
+  #main_view .carousel-item img{
+    object-position: 80%;
+  }
+}
