@@ -46,5 +46,14 @@
         $(".btn-apply").click(function(){
             $(".modal").modal("hide");
         });
+        //Scroll to section on click
+        $("a.nav-link").click(function() {
+            if (this.hash!=="") {
+                var $target =  $('section' + this.hash);
+                var targetOffset = $target.offset().top - 50;
+                $('html,body').animate({scrollTop: targetOffset}, 0);
+                return false;
+            }
+        });
     });
 })();
