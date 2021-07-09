@@ -486,7 +486,7 @@ footer .soc-item i{
 /* Playbox CSS */
 .playbox, .playboximage{
   background-color: rgb(0 0 0 / 90%) !important;
-  overflow: unset !important;
+  overflow: scroll !important;
   z-index: 1050 !important;
 }
 .playboximage .bgImage{
@@ -500,6 +500,9 @@ footer .soc-item i{
 .playboximage .exit {
   background-color: #303030 !important;
   box-shadow: 0 0 6px rgb(0 0 0 / 60%) !important;
+}
+.playboximage .imageList{
+  overflow: scroll !important;
 }
 .wrap-16-9{
   position: relative;
