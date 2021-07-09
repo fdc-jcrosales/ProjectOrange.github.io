@@ -330,8 +330,11 @@ section, header, footer, .container, .container-fluid {
 }
 #benefits img, #gallery img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
+}
+.playboximage .bgImage {
+  object-fit: contain !important;
 }
 #benefits .card, #gallery .card {
   background-color: transparent;
@@ -386,7 +389,7 @@ section, header, footer, .container, .container-fluid {
   flex-direction: row;
 }
 #benefits .content_card{
-  margin: 5px;
+  margin: 15px;
   background-size: cover;
   min-height: 220px;
   box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.8);
@@ -578,6 +581,12 @@ footer .soc-item i{
   #benefits .card .content-wrap {
     opacity: 1;
     padding: 1rem;
+  }
+  .playboximage .imageList {
+    display: none !important;
+  }
+  .playboximage .arrow{
+    top: 120% !important;
   }
 }
 @media (max-width: 600px) { 
