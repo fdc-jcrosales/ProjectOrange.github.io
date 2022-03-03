@@ -173,7 +173,6 @@ section, header, footer, .container, .container-fluid {
   display: -ms-flex;
   display: -o-flex;
   align-items: center;
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
